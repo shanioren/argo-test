@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
       - name: master
-        image: registry.k8s.io/redis:e2e  # or just image: redis
+        image: redis
         resources:
           requests:
             cpu: 100m
@@ -132,7 +132,7 @@ spec:
     spec:
       containers:
       - name: php-redis
-        image: gcr.io/google-samples/gb-frontend:v4
+        image: forestgun007/google-samples-gb-frontend:v4
         resources:
           requests:
             cpu: 100m
