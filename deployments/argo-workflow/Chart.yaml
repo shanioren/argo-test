@@ -5,7 +5,6 @@ type: application                   # Type of the chart (application or library)
 version: 0.1.0                      # Version of your chart (for managing this Helm chart)
 appVersion: 3.4.5                   # Version of the Argo Workflows application
 dependencies:
-  - name: argo-cd                   # Optional: Example of another dependency (Argo CD)
-    version: 5.0.0
+  - name: argo-server
+    version: 0.16.0
     repository: "https://argoproj.github.io/argo-helm"
-    condition: argoCd.enabled        # Conditionally deploy Argo CD with Workflows
