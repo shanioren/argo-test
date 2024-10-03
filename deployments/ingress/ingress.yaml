@@ -15,5 +15,5 @@ spec:
               service:
                 name: hello-world
                 port:
-                  number: 30081
+                  number: 80
 ---
