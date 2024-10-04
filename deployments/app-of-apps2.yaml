@@ -10,6 +10,8 @@ spec:
     path: deployments/apps2
     repoURL: 'https://github.com/shanioren/argo-test.git'
     targetRevision: main
+    directory:
+      recurse: true
   project: default
   # syncPolicy:
   #   automated:
