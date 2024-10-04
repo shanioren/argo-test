@@ -5,7 +5,7 @@ metadata:
 spec:
   destination:
     name: in-cluster
-    namespace: argocd
+    namespace: default
   source:
     path: deployments/apps
     repoURL: 'https://github.com/shanioren/argo-test.git'
