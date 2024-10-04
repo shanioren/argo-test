@@ -6,4 +6,4 @@ dependencies:
   - name: argo-workflows
     version: 0.16.0
     repository: "https://argoproj.github.io/argo-helm"
-    condition: argoWorkflows.enabled
+#    condition: argoWorkflows.enabled
