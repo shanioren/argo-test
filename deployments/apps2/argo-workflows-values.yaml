@@ -325,7 +325,7 @@ argo-workflows:
 #  resources: {}
 #
 #  # -- Configure liveness [probe] for the controller
-#  # @default -- See [values.yaml]
+#  # @default -- See [argo-workflows-values.yaml]
 #  livenessProbe:
 #    httpGet:
 #      port: 6060
@@ -412,7 +412,7 @@ argo-workflows:
 #
 #  # -- Configure when workflow controller runs in a different k8s cluster with the workflow workloads,
 #  # or needs to communicate with the k8s apiserver using an out-of-cluster kubeconfig secret.
-#  # @default -- `{}` (See [values.yaml])
+#  # @default -- `{}` (See [argo-workflows-values.yaml])
 #  kubeConfig: {}
 #    # # name of the kubeconfig secret, may not be empty when kubeConfig specified
 #    # secretName: kubeconfig-secret
@@ -804,7 +804,7 @@ argo-workflows:
 #  # -- Archive the main container logs as an artifact
 #  archiveLogs: false
 #  # -- Store artifact in a S3-compliant object store
-#  # @default -- See [values.yaml]
+#  # @default -- See [argo-workflows-values.yaml]
 #  s3: {}
 #    # # Note the `key` attribute is not the actual secret, it's the PATH to
 #    # # the contents in the associated secret, as defined by the `name` attribute.
@@ -827,7 +827,7 @@ argo-workflows:
 #    # encryptionOptions:
 #    #   enableEncryption: true
 #  # -- Store artifact in a GCS object store
-#  # @default -- `{}` (See [values.yaml])
+#  # @default -- `{}` (See [argo-workflows-values.yaml])
 #  gcs: {}
 #    # bucket: <project>-argo
 #    # keyFormat: "{{ \"{{workflow.namespace}}/{{workflow.name}}/{{pod.name}}\" }}"
@@ -843,7 +843,7 @@ argo-workflows:
 #    #   name: my-gcs-credentials
 #    #   key: serviceAccountKey
 #  # -- Store artifact in Azure Blob Storage
-#  # @default -- `{}` (See [values.yaml])
+#  # @default -- `{}` (See [argo-workflows-values.yaml])
 #  azure: {}
 #    # endpoint: https://mystorageaccountname.blob.core.windows.net
 #    # container: my-container-name
@@ -875,7 +875,7 @@ argo-workflows:
 #
 ## -- The section of [artifact repository ref](https://argo-workflows.readthedocs.io/en/stable/artifact-repository-ref/).
 ## Each map key is the name of configmap
-## @default -- `{}` (See [values.yaml])
+## @default -- `{}` (See [argo-workflows-values.yaml])
 #artifactRepositoryRef: {}
 #  # # -- 1st ConfigMap
 #  # # If you want to use this config map by default, name it "artifact-repositories".
