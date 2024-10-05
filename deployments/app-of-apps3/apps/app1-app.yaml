@@ -13,7 +13,7 @@ spec:
       valueFiles:
         - apps/app1/values.yaml                    # Path to custom values.yaml in Git repo
   destination:
-    server: 'https://kubernetes.default.svc'
+    server: in-cluster
     namespace: default
   syncPolicy:
     automated:
