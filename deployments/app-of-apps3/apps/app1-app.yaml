@@ -13,7 +13,7 @@ spec:
       valueFiles:
         - app1/values.yaml                    # Path to custom values.yaml in Git repo
   destination:
-#    server: in-cluster
+    name: in-cluster
     namespace: default
   syncPolicy:
     automated:
