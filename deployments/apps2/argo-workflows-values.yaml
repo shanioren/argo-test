@@ -1,14 +1,14 @@
-#workflow:
-#  serviceAccount:
-#    create: true
-#    name: "argo-workflow"
-#  rbac:
-#    create: true
-#controller:
-#  workflowNamespaces:
-#    - default
-#    - foo
-#    - bar
+workflow:
+  serviceAccount:
+    create: true
+    name: "argo-workflow"
+  rbac:
+    create: true
+controller:
+  workflowNamespaces:
+    - default
+    - foo
+    - bar
 #images:
 #  # -- Common tag for Argo Workflows images. Defaults to `.Chart.AppVersion`.
 #  tag: ""

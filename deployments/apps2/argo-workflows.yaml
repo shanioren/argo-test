@@ -12,6 +12,7 @@ spec:
     chart: argo-workflows
     targetRevision: 0.16.0
     helm:
+      version: v2
       valueFiles:
         - argo-workflows-values.yaml
 #    helm:
