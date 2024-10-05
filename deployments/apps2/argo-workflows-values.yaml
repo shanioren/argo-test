@@ -9,23 +9,23 @@
 #    - default
 #    - foo
 #    - bar
-images:
-  # -- Common tag for Argo Workflows images. Defaults to `.Chart.AppVersion`.
-  tag: ""
-  # -- imagePullPolicy to apply to all containers
-  pullPolicy: Always
-  # -- Secrets with credentials to pull images from a private registry
-  pullSecrets: []
-  # - name: argo-pull-secret
-
-## Custom resource configuration
-crds:
-  # -- Install and upgrade CRDs
-  install: true
-  # -- Keep CRDs on chart uninstall
-  keep: true
-  # -- Annotations to be added to all CRDs
-  annotations: {}
+#images:
+#  # -- Common tag for Argo Workflows images. Defaults to `.Chart.AppVersion`.
+#  tag: ""
+#  # -- imagePullPolicy to apply to all containers
+#  pullPolicy: Always
+#  # -- Secrets with credentials to pull images from a private registry
+#  pullSecrets: []
+#  # - name: argo-pull-secret
+#
+### Custom resource configuration
+#crds:
+#  # -- Install and upgrade CRDs
+#  install: true
+#  # -- Keep CRDs on chart uninstall
+#  keep: true
+#  # -- Annotations to be added to all CRDs
+#  annotations: {}
 #
 ## -- Create clusterroles that extend existing clusterroles to interact with argo-cd crds
 ### Ref: https://kubernetes.io/docs/reference/access-authn-authz/rbac/#aggregated-clusterroles
