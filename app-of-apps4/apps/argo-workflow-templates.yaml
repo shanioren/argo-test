@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: workflow-templates
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    path: workflow-templates
+    repoURL: 'https://github.com/shanioren/argo-test.git'
+    targetRevision: main
+  destination:
+    name: in-cluster
+    namespace: default
