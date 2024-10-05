@@ -7,3 +7,5 @@
 controller:
   workflowNamespaces:
     - default
+server:
+  authModes: ['server']
