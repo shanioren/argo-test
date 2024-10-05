@@ -7,7 +7,7 @@ spec:
     name: in-cluster
     namespace: default
   source:
-    path: deployments/app-of-apps3/apps
+    path: app-of-apps3/apps
     repoURL: 'https://github.com/shanioren/argo-test.git'
     targetRevision: main
     directory:
