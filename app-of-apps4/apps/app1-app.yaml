@@ -1,22 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app-of-apps4
+  name: app1
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
+  project: default
+  source:
+    path: app-of-apps4/apps/app1
+    repoURL: 'https://github.com/shanioren/argo-test.git'
+    targetRevision: main
   destination:
     name: in-cluster
     namespace: default
-  source:
-    path: app-of-apps4/apps
-    repoURL: 'https://github.com/shanioren/argo-test.git'
-    targetRevision: main
-    directory:
-      recurse: true
-  project: default
-#  syncPolicy:
-#   automated:
-#     prune: true
-#     selfHeal: true
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
