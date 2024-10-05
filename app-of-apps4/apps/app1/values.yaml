@@ -1,5 +1,5 @@
 wordpress:
-  wordpressPassword: foo
+  wordpressPassword: shani
   mariadb:
     db:
       password: bar
