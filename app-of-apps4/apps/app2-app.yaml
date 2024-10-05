@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argo-workflows
+spec:
+  project: default
+  sources:
+  - repoURL: https://argoproj.github.io/argo-helm
+    chart: argo-workflows
+    targetRevision: 0.16.0
+    helm:
+      valueFiles:
+      - $values/app-of-apps4/apps/app2/values.yaml
+  - repoURL: 'https://github.com/shanioren/argo-test.git'
+    targetRevision: main
+    ref: values
+  destination:
+    name: in-cluster
+    namespace: default
