@@ -13,7 +13,7 @@ spec:
     targetRevision: '15.0.0'                       # Version of the Helm chart
     helm:
       valueFiles:
-        - apps/app1/values.yaml                    # Path to custom values.yaml in Git repo
+        - app-of-apps3/apps/app1/values.yaml                    # Path to custom values.yaml in Git repo
   destination:
     name: in-cluster
     namespace: default

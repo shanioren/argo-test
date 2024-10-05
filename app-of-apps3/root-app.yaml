@@ -10,13 +10,13 @@ spec:
     name: in-cluster
     namespace: default
   source:
-    path: apps
-    repoURL: 'https://github.com/shanioren/argo-test/app-of-apps3'
+    path: app-of-apps3/apps
+    repoURL: 'https://github.com/shanioren/argo-test.git'
     targetRevision: main
     directory:
       recurse: true
   project: default
-  syncPolicy:
-   automated:
-     prune: true
-     selfHeal: true
+#  syncPolicy:
+#   automated:
+#     prune: true
+#     selfHeal: true
