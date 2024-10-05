@@ -12,9 +12,9 @@ spec:
     helm:
       valueFiles:
         - app1/values.yaml                    # Path to custom values.yaml in Git repo
-  destination:
-    server: in-cluster
-    namespace: default
+#  destination:
+#    server: in-cluster
+#    namespace: default
   syncPolicy:
     automated:
       prune: true
