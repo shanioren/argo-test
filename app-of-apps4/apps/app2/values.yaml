@@ -7,5 +7,15 @@
 controller:
   workflowNamespaces:
     - default
+workflowController:
+  # Disable authentication for the server
+  extraArgs:
+    - --auth-mode=server  # Disable token-based authentication
 server:
-  authModes: ['server']
+  # If you're using the Argo Workflows UI server, disable authentication here as well
+  extraArgs:
+    - --auth-mode=server  # Disable authentication on the UI/API server
+rbac:
+  create: false  # If you don't want RBAC enabled (optional)
+serviceAccount:
+  create: false  # Disable service accounts if not needed
