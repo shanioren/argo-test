@@ -3,6 +3,8 @@ kind: Application
 metadata:
   name: app1
   namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
@@ -11,7 +13,7 @@ spec:
     targetRevision: '15.0.0'                       # Version of the Helm chart
     helm:
       valueFiles:
-        - values.yaml                    # Path to custom values.yaml in Git repo
+        - apps/app1/values.yaml                    # Path to custom values.yaml in Git repo
   destination:
     name: in-cluster
     namespace: default
