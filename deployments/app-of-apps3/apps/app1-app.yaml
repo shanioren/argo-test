@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app1
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://charts.bitnami.com/bitnami'  # External Helm repo
+    chart: nginx                                   # External Helm chart name
+    targetRevision: '15.0.0'                       # Version of the Helm chart
+    helm:
+      valueFiles:
+        - apps/app1/values.yaml                    # Path to custom values.yaml in Git repo
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

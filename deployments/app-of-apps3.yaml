@@ -1,19 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app-of-apps2
+  name: app-of-apps3
 spec:
   destination:
     name: in-cluster
     namespace: default
   source:
-    path: deployments/apps2
+    path: deployments/app-of-apps3
     repoURL: 'https://github.com/shanioren/argo-test.git'
     targetRevision: main
     directory:
       recurse: true
   project: default
-  # syncPolicy:
-  #   automated:
-  #     prune: true
-  #     selfHeal: true
+  syncPolicy:
+   automated:
+     prune: true
+     selfHeal: true
