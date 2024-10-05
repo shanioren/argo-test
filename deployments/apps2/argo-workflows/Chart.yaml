@@ -14,7 +14,7 @@ spec:
     helm:
       version: v3
       valueFiles:
-        - argo-workflows/values.yaml
+        - deployments/apps2/argo-workflows/values.yaml
 #    helm:
 #      parameters:
   destination:
