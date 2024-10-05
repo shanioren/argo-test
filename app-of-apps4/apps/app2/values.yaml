@@ -7,5 +7,3 @@ workflow:
 controller:
   workflowNamespaces:
     - default
-    - foo
-    - bar
